@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "title": "No-Response Retry",
+    "description": "On network failure the service keeps retrying until success. It may still stop at any time, but when enabled it may continuously consume API usage."
+  },
+  "config": {
+    "no-response-retry": {
+      "enabled": "No-response retry",
+      "initialDelayMs": "Initial retry delay (ms)",
+      "maxDelayMs": "Max retry delay (ms)",
+      "jitterRatio": "Backoff jitter ratio",
+      "retryableCodes": "Failure codes treated as network faults"
+    }
+  }
+}

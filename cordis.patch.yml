@@ -1,0 +1,11 @@
+# dsh-no-response-retry bundle patch layer
+# 在 profile 的 dsh.profile.bundles 列出 dsh-no-response-retry 即生效；重启 dsh 后加载。
+- insert:
+    - id: no-response-retry
+      name: dsh-no-response-retry
+      config:
+        enabled: true
+        initialDelayMs: 1000
+        maxDelayMs: 30000
+        jitterRatio: 0.2
+        retryableCodes: [TRANSPORT, TIMEOUT, EMPTY_RESPONSE, SERVER]

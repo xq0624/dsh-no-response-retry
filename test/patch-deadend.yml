@@ -1,0 +1,18 @@
+# 测试用 overlay：把默认模型指到一个死端口，制造 TRANSPORT 失败
+- insert:
+    - id: llm-pi-ai
+      name: "@deepseek-ai/dsh-llm-pi-ai"
+      config:
+        providers:
+          deadend:
+            displayName: deadend
+            apiKeyEnv: NRR_TEST_KEY
+            api: openai-completions
+            baseURL: http://127.0.0.1:9/v1
+            models:
+              - id: test
+                name: test
+- id: agent-default-model
+  config:
+    provider: deadend
+    model: test

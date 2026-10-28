@@ -1,0 +1,47 @@
+{
+  "name": "dsh-no-response-retry",
+  "version": "0.1.0",
+  "description": "无反应重试：网络故障时服务将一直重试直到成功。仍可能随时停止，但开启后可能持续消耗 API 用量。Retry model requests forever on transient network failures until success.",
+  "license": "MIT",
+  "author": "local",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-plugins",
+    "deepseek-harness",
+    "cordis-plugin",
+    "retry",
+    "llm-retry",
+    "no-response-retry",
+    "无反应重试",
+    "重试",
+    "网络故障"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

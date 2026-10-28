@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "title": "无反应重试",
+    "description": "网络故障时服务将一直重试直到成功。仍可能随时停止，但开启后可能持续消耗 API 用量。"
+  },
+  "config": {
+    "no-response-retry": {
+      "enabled": "无反应重试",
+      "initialDelayMs": "首次重试等待（毫秒）",
+      "maxDelayMs": "重试等待上限（毫秒）",
+      "jitterRatio": "退避抖动比例",
+      "retryableCodes": "视为网络故障的失败码"
+    }
+  }
+}
